@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qibla Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-container">
+        <header class="app-header">
+            <h1>Qibla Finder</h1>
+            <p>Interactive web compass to find the direction of Mecca</p>
+        </header>
+
+        <!-- Compass UI Wrapper -->
+        <section class="compass-wrapper">
+            <div class="compass-dial">
+                <!-- Visual cardinal direction markings -->
+                <div class="cardinal north">N</div>
+                <div class="cardinal east">E</div>
+                <div class="cardinal south">S</div>
+                <div class="cardinal west">W</div>
+                
+                <!-- The target needle controlled by script.js -->
+                <div id="needle" class="compass-needle"></div>
+                <div class="center-pivot"></div>
+            </div>
+        </section>
+
+        <!-- Status & Interactive controls -->
+        <footer class="app-controls">
+            <div id="status" class="status-message">
+                Requesting GPS location access...
+            </div>
+            <!-- NEW: Calibration instruction alert -->
+            <div class="calibration-note">
+                💡 <strong>Tip for accuracy:</strong> For the most precise reading, place your phone flat on the floor, aligned touching any side of a flat wall. 
+            </div>
+            <!-- Hidden by default, displayed via JavaScript for iOS users -->
+            <button id="permissionBtn" class="permission-btn">
+                Enable Compass Sensors
+            </button>
+        </footer>
+    </main>
+
+    <!-- Linking external core JavaScript logic -->
+    <script src="script.js"></script>
+</body>
+</html>
